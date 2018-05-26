@@ -2,14 +2,16 @@ const speedEl = document.querySelector('#speed');
 const speedIndicatorEl = document.querySelector('#speed-indicator');
 const legsEl = document.querySelector('#legs');
 
+const contentEl = document.querySelector('.content');
 const groupEl = document.querySelector('#group');
 const letterEl = document.querySelector('#letter');
 const handEl = document.querySelector('#hand');
 const legEl = document.querySelector('#leg');
 
 const gRect = groupEl.getBoundingClientRect();
-const maxTop = window.innerHeight - gRect.height;
-const maxLeft = window.innerWidth - gRect.width;
+const cRect = contentEl.getBoundingClientRect();
+const maxTop = cRect.height - gRect.height;
+const maxLeft = cRect.width - gRect.width;
 
 let interval;
 
